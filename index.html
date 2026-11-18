@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مفاجأة لمحمد 💙</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Tahoma, Arial;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #101a35, #263d68, #17264a);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+}
+
+h1 {
+  color: #a9e5ff;
+  font-size: 42px;
+  text-shadow: 0 0 20px #55baff;
+}
+
+.rocket {
+  font-size: 55px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+.subtitle {
+  color: #d0dafa;
+  margin-bottom: 35px;
+}
+
+.gift-area {
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift {
+  position: relative;
+  width: 150px;
+  height: 105px;
+  background: #318fc1;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  width: 30px;
+  height: 100%;
+  background: #e4f7ff;
+}
+
+.gift::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -8px;
+  width: 166px;
+  height: 25px;
+  border-radius: 5px;
+  background: #66c9ed;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+
+.bow {
+  position: absolute;
+  top: -42px;
+  left: 55px;
+  font-size: 40px;
+  z-index: 2;
+}
+
+.hint {
+  color: #a9dfff;
+  margin-top: 15px;
+}
+
+.card {
+  display: none;
+  padding: 25px 20px;
+  border: 1px solid #9bdfff;
+  border-radius: 25px;
+  background: #ffffff15;
+  box-shadow: 0 15px 40px #0005;
+  animation: appear .7s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heart {
+  font-size: 55px;
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.2); }
+}
+
+h2 {
+  color: #a9e5ff;
+}
+
+.message {
+  line-height: 2.2;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(120deg, #287eae, #6d64b4);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.extra {
+  display: none;
+  margin-top: 20px;
+  line-height: 2;
+  color: #b9eaff;
+}
+
+.footer {
+  margin-top: 25px;
+  color: #a9b8d5;
+  font-size: 12px;
+}
+
+.star {
+  position: fixed;
+  bottom: -30px;
+  animation: rise 7s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(300deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div> A SPECIAL GIFT FOR YOU </div>
+
+  <div class="rocket">🚀</div>
+
+  <h1>MOHAMED</h1>
+
+  <div class="subtitle">
+    لأحلى أخ في الدنيا 💙
+  </div>
+
+  <div class="gift-area" id="giftArea">
+    <div class="gift" onclick="openGift()">
+      <div class="bow">🎀</div>
+    </div>
+  </div>
+
+  <div class="hint" id="hint">
+    دوس على الهدية وافتحها يا محمد 🎁
+  </div>
+
+  <div class="card" id="card">
+
+    <div class="heart">💙</div>
+
+    <h2>يا محمد يا أخويا الغالي</h2>
+
+    <div class="message">
+      يمكن مش بقولك الكلام ده كتير،
+      <br>
+      بس وجودك في حياتي نعمة كبيرة.
+      <br><br>
+
+      ربنا يخليك ليا، ويفرح قلبك
+      <br>
+      ويحققلك كل اللي نفسك فيه.
+      <br><br>
+
+      وتفضل دايمًا ناجح وقوي،
+      <br>
+      ومبسوط ومنور حياتنا يا أخويا ❤️
+    </div>
+
+    <button onclick="showSurprise()">
+      اضغط هنا يا نجم 😂
+    </button>
+
+    <div class="extra" id="extra">
+      <div style="font-size:40px">😂💙🎉</div>
+
+      فاكر نفسك هتخلص من رخامتي؟
+      <br>
+      ده أنا أختك وهفضل أنكد عليك العمر كله!
+      <br><br>
+
+      بهزر يا عم، ربنا يخليك ليا يا أحلى أخ 💙
+    </div>
+
+  </div>
+
+  <div class="footer">
+    YOUR SISTER LOVES YOU ♡
+  </div>
+
+</div>
+
+<script>
+let opened = false;
+
+function openGift() {
+  if (opened) return;
+
+  opened = true;
+
+  document.getElementById("giftArea").style.display = "none";
+  document.getElementById("hint").style.display = "none";
+
+  document.getElementById("card").style.display = "block";
+}
+
+function showSurprise() {
+  document.getElementById("extra").style.display = "block";
+
+  for (let i = 0; i < 20; i++) {
+    setTimeout(makeStar, i * 100);
+  }
+}
+
+function makeStar() {
+  const star = document.createElement("div");
+
+  star.className = "star";
+  star.innerHTML = ["💙", "✨", "★", "🎉"][
+    Math.floor(Math.random() * 4)
+  ];
+
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.fontSize = (15 + Math.random() * 20) + "px";
+
+  document.body.appendChild(star);
+
+  setTimeout(() => star.remove(), 7000);
+}
+
+setInterval(makeStar, 500);
+</script>
+
+</body>
+</html>
